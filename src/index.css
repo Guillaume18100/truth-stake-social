@@ -1,41 +1,52 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 215 59% 13%;
-    --foreground: 0 0% 100%;
-
-    --card: 216 60% 15%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 216 60% 15%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 24 100% 50%;
+    --background: 217 40% 11%;
+    --foreground: 210 40% 98%;
+    --card: 217 36% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 36% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 239 84% 67%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 215 45% 20%;
+    --secondary: 142 70% 45%;
     --secondary-foreground: 0 0% 100%;
-
-    --muted: 215 40% 25%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 24 100% 50%;
-    --accent-foreground: 0 0% 100%;
-
+    --muted: 217 36% 28%;
+    --muted-foreground: 214 32% 91%;
+    --accent: 217 36% 18%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 215 30% 30%;
-    --input: 215 30% 30%;
-    --ring: 24 100% 50%;
-
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 36% 28%;
+    --input: 217 36% 28%;
+    --ring: 239 84% 67%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 217 40% 11%;
+    --foreground: 210 40% 98%;
+    --card: 217 36% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 36% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 70% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 36% 28%;
+    --muted-foreground: 214 32% 91%;
+    --accent: 217 36% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 36% 28%;
+    --input: 217 36% 28%;
+    --ring: 239 84% 67%;
   }
 }
 
@@ -43,16 +54,8 @@
   * {
     @apply border-border;
   }
-  
   body {
-    @apply bg-navy text-foreground font-['Inter',sans-serif];
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
-  }
-  
-  .interactive-border {
-    @apply border-2 border-orange;
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

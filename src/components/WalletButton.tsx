@@ -6,13 +6,14 @@ import { LinkIcon } from 'lucide-react';
 interface WalletButtonProps {
   address?: string;
   onConnect: () => void;
+  className?: string;
 }
 
-const WalletButton = ({ address, onConnect }: WalletButtonProps) => {
+const WalletButton = ({ address, onConnect, className }: WalletButtonProps) => {
   return (
     <Button 
       onClick={onConnect}
-      className="fixed top-4 right-4 bg-orange hover:bg-orange-light transition-colors"
+      className={`bg-secondary-main hover:bg-secondary-dark transition-colors ${className || ''}`}
     >
       {address ? (
         <span className="flex items-center gap-2">
