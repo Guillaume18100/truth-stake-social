@@ -14,7 +14,7 @@ import { useUIStore } from '@/store/ui';
 import { useToast } from '@/hooks/use-toast';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { uploadIcon } from 'lucide-react';
+import { Upload } from 'lucide-react';
 
 const VictimEnroll = () => {
   const { victimEnroll, closeVictimEnroll } = useUIStore();
